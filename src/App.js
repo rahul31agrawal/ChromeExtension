@@ -1,10 +1,13 @@
 
 import './App.css';
+import Greeting from './Component/Greeting/Greeting';
+// import Time from './Component/Time/Time';
 
 function App() {
   return (
     <div className="App">
-      <h1>hello</h1>
+      {/* <Time/> */}
+      <Greeting/>
     </div>
   );
 }
