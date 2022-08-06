@@ -1,0 +1,17 @@
+.quote-card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    height: 270px;
+    font-size: 25px;
+    background-color: black;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.quote{
+    margin-top: -2rem;
+}
+
