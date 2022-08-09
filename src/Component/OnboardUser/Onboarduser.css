@@ -1,0 +1,38 @@
+.onboard-card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+    height: 130px;
+    font-size: 35px;
+    background-color: black;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+
+.greeting {
+    text-align: center;
+    line-height: 25px;
+}
+  
+.greeting-form input {
+    /* display: block; */
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    background: transparent;
+    border: none;
+    font-size: 35px;
+    caret-color: #fff;
+    outline: none;
+    text-align: center;
+    color: #fff;
+}
+  
+.user-name {
+    font-weight: bold;
+}
+
