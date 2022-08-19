@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
 import {useUserName} from "../../context/userContex";
 import { useNavigate } from 'react-router-dom';
 import "../Time/Time.css";
@@ -7,6 +7,10 @@ import "./Onboarduser.css";
 
 
 function OnboardUser() {
+  
+
+ 
+
     const [greetingMessage, setGreetingMessage] = useState('');
   
     const [isMade, setIsMade] = useState(true);
@@ -39,6 +43,9 @@ function OnboardUser() {
         setUserName(loadedItem);
       }
     }, [setUserName]);
+
+
+    
   
     useEffect(() => {
       const json = JSON.stringify(userName);
@@ -69,6 +76,7 @@ function OnboardUser() {
               className="greeting-form"
               onSubmit={submitUserName}>
               <input
+             
                placeholder="Enter name"
                 type="text"
                 value={userName}
