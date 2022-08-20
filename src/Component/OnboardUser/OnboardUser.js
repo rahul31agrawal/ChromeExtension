@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from "react";
 import {useUserName} from "../../context/userContex";
 import { useNavigate } from 'react-router-dom';
+
 import "../Time/Time.css";
 import "./Onboarduser.css";
 
@@ -16,13 +17,16 @@ function OnboardUser() {
     const [isMade, setIsMade] = useState(true);
   
     const {userName, setUserName} = useUserName();
+    const { setTodos} =useUserName([]);
     let navigate = useNavigate();
+
   
     const submitUserName = (e) => {
       e.preventDefault();
       console.log(userName);
       setIsMade(true)
       navigate('/widgets');
+      setTodos([])
     }
   
     let name;
