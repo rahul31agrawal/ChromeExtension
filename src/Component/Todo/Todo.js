@@ -3,12 +3,14 @@ import "./Todo.css";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { AiFillEdit } from "react-icons/ai";
 import { ImCheckboxChecked, ImCheckboxUnchecked } from "react-icons/im";
+import { useUserName } from "../../context/userContex";
 
 const Todo = () => {
   const [todo, setTodo] = useState("");
-  const [todos, setTodos] = useState([]);
+  // const [todos, setTodos] = useState([]);
   const [editedTodo, setEditedTodo] = useState("");
   const [editedText, setEditedText] = useState("");
+  const {todos, setTodos} =useUserName([]);
 
   const addTodo = (e) => {
     e.preventDefault();
@@ -72,7 +74,7 @@ const Todo = () => {
     if (loadedTodos) {
       setTodos(loadedTodos);
     }
-  }, []);
+  }, [setTodos]);
 
   useEffect(() => {
     const json = JSON.stringify(todos);

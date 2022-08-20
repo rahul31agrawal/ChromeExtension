@@ -7,9 +7,10 @@ const UserProvider=({children})=>{
     
 
     const [userName, setUserName] = useState('');
+    const [todos, setTodos] = useState([]);
 
     return (
-        <UserContext.Provider value={{userName, setUserName}}>
+        <UserContext.Provider value={{userName, setUserName,todos, setTodos}}>
             {children}
         </UserContext.Provider>
     )
