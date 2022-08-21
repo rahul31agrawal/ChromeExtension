@@ -29,6 +29,11 @@
     font-family: "Poppins", helvetica, arial, sans-serif;
 }
 
+.item1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 3;
+  }
+
 
 .item2 {
     grid-column: 3;
@@ -65,4 +70,22 @@
 ::-webkit-scrollbar-thumb {
     background: #fff;
     border-radius: 5px;
+}
+
+.backBtn{
+    padding: .5rem;
+    border-radius: .5rem;
+    margin-top: .5rem;
+}
+
+.backBtnDiv{
+    margin-left: 75rem;
+   
+}
+
+
+
+.link{
+    text-decoration: none;
+    font-weight: bold;
 }

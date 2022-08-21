@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 600px;
-    height: 130px;
+    width: 900px;
+    height: 300px;
     font-size: 35px;
     background-color: black;
     color: #fff;
@@ -19,20 +19,35 @@
 }
   
 .greeting-form input {
-    /* display: block; */
+    
     width: 80%;
     margin: 0 auto;
     padding: 0;
-    background: transparent;
+    
     border: none;
     font-size: 35px;
     caret-color: #fff;
     outline: none;
     text-align: center;
     color: #fff;
+    border-bottom: 1px solid #fff;;
 }
   
 .user-name {
     font-weight: bold;
 }
 
+.greeting-form > *{
+    margin: 20px 0;
+}
+
+.submitBtn{
+    padding: .5rem;
+    margin-top: .5rem;
+    
+}
+
+.link{
+    text-decoration: none;
+    font-weight: bold;
+}
