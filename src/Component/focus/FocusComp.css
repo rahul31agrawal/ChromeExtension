@@ -1,0 +1,14 @@
+.focusContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 2rem;
+    height: 34rem;
+    width: 20rem;
+    font-size: 35px;
+    background-color: black;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    opacity: .7;
+}
