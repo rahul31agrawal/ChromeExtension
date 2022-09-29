@@ -20,7 +20,7 @@ function OnboardUser() {
     e.preventDefault();
     console.log(userName);
     
-    setTodos([]);
+    setTodos([""]);
   };
 
   
