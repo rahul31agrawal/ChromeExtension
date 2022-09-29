@@ -9,42 +9,31 @@ import "./Onboarduser.css";
 function OnboardUser() {
   const [greetingMessage, setGreetingMessage] = useState("");
 
-  // const [isMade, setIsMade] = useState(true);
+  
 
   const { userName, setUserName,userFocus, setUserFocus } = useUserName();
 
   const { setTodos } = useUserName([]);
-  // let navigate = useNavigate();
+ 
 
   const submitUserName = (e) => {
     e.preventDefault();
     console.log(userName);
-    // setIsMade(true)
-    // navigate('/widgets');
+    
     setTodos([]);
   };
 
-  // let name;
-  // if (isMade) {
-  //   name = (
-  //     <span>{userName}</span>
-  //   )
-  // }
-
-  // const openNameInput = () => {
-  //   setIsMade(false);
-  // }
+  
 
   useEffect(() => {
     const item = localStorage.getItem("userName");
     const loadedItem = JSON.parse(item);
 
-    // const itemFocus = localStorage.getItem("userFocus");
-    // const loadedFocus = JSON.parse(itemFocus);
+    
 
     if (loadedItem  ) {
       setUserName(loadedItem);
-      // setUserFocus(loadedFocus);
+      
     }
   }, [setUserName]);
 
@@ -52,8 +41,7 @@ function OnboardUser() {
     const json = JSON.stringify(userName);
     localStorage.setItem("userName", json);
 
-    // const json2 = JSON.stringify(userFocus);
-    // localStorage.setItem("userFocus", json2);
+    
 
   }, [userName]);
 
