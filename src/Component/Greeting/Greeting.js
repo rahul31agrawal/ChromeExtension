@@ -6,26 +6,11 @@ import {useUserName} from "../../context/userContex";
 function Greeting() {
   const [greetingMessage, setGreetingMessage] = useState('');
   
-  const [isMade, setIsMade] = useState(true);
+  
 
   const {userName, setUserName} = useUserName();
 
-  const submitUserName = (e) => {
-    e.preventDefault();
-    console.log(userName);
-    setIsMade(true)
-  }
-
-  let name;
-  if (isMade) {
-    name = (
-      <span>{userName}</span>
-    )
-  }
-
-  const openNameInput = () => {
-    setIsMade(false);
-  }
+  
 
   useEffect(() => {
     const item = localStorage.getItem("userName");
@@ -58,29 +43,10 @@ function Greeting() {
     <div className="time-card greeting">
       <span>{greetingMessage}</span>
       <br />
-      {
-        !isMade ?
-          <form
-            className="greeting-form"
-            onSubmit={submitUserName}>
-            <input
-             placeholder="Enter name"
-              type="text"
-              value={userName}
-              onChange={event => setUserName(event.target.value)}
-            />
-          </form>
-          :
-          <span
-          
-            className="user-name"
-            onClick={openNameInput}
-          >
-            {name}!
 
-            
-          </span>
-      }
+      <h3>{userName}</h3>
+
+      
     </div>
   );
 }
