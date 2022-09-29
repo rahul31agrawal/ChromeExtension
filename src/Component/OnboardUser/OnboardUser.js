@@ -17,7 +17,7 @@ function OnboardUser() {
 
   useEffect(() => {
     const json = JSON.stringify(todos);
-    localStorage.setItem("todos", json);
+    localStorage.removeItem("todos", json);
   }, [todos]);
  
 
