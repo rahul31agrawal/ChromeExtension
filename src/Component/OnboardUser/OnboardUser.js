@@ -13,14 +13,19 @@ function OnboardUser() {
 
   const { userName, setUserName,userFocus, setUserFocus } = useUserName();
 
-  const { setTodos } = useUserName([]);
+  const { todos,setTodos } = useUserName([]);
+
+  useEffect(() => {
+    const json = JSON.stringify(todos);
+    localStorage.setItem("todos", json);
+  }, [todos]);
  
 
   const submitUserName = (e) => {
     e.preventDefault();
     console.log(userName);
     
-    setTodos([""]);
+    setTodos([]);
   };
 
   
